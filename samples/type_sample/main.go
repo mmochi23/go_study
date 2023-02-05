@@ -95,4 +95,21 @@ String
 Sample\n
 `
 	fmt.Printf("%v", s)
+
+	a1 := [5]int{1, 2, 3, 4, 5}
+	fmt.Printf("%v %T %d\n", a1, a1, a1[4])
+	a2 := [5]int{}
+	fmt.Printf("%v %T %d\n", a2, a2, a2[4])
+	a3 := [...]int{1, 2, 3, 4}
+	a4 := a3
+	a4[3] = 255
+	fmt.Printf("%v %T %d\n", a3, a3, a3[3])
+	fmt.Printf("%v %T %d\n", a4, a4, a4[3])
+
+	var x interface{}
+	fmt.Printf("%v\n", x)
+	x = a4
+	fmt.Printf("%v\n", x)
+	x = s
+	fmt.Printf("%v\n", x)
 }
